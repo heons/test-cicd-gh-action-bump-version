@@ -35,7 +35,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           skip-tag:  'true'
-          minor-wording:  'MINOR:,minor::'
+          minor-wording:  'MINOR:,minor:'
           major-wording:  'MAJOR:,major:'
           patch-wording:  'patch:,fix:'
 
