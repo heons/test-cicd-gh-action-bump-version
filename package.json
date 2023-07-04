@@ -16,5 +16,7 @@
     "url": "https://github.com/heons/test-cicd-gh-action-bump-version/issues"
   },
   "homepage": "https://github.com/heons/test-cicd-gh-action-bump-version#readme",
-  "devDependencies": {}
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
