@@ -39,6 +39,11 @@ jobs:
           major-wording:  'MAJOR:,major:'
           patch-wording:  'patch:,fix:'
 
+      - name: Install dependencies
+        run: npm install --tag experimental
+        env:
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Publish to GitHub Packages
         run: npm publish --tag experimental
         env:
