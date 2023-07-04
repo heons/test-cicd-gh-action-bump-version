@@ -29,14 +29,14 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name:  'Automated Version Bump'
-      #   uses:  'phips28/gh-action-bump-version@master'
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     minor-wording:  'MINOR:,minor::'
-      #     major-wording:  'MAJOR:,major:'
-      #     patch-wording:  'patch:,fix:'
+      - name:  'Automated Version Bump'
+        uses:  'phips28/gh-action-bump-version@master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          minor-wording:  'MINOR:,minor::'
+          major-wording:  'MAJOR:,major:'
+          patch-wording:  'patch:,fix:'
 
       - name: Publish to GitHub Packages
         run: npm publish --tag experimental
