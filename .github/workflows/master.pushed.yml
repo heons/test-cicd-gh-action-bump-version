@@ -36,7 +36,6 @@ jobs:
         with:
           skip-tag: 'true'
           version-type: 'prerelease'
-          rc-wording: ''
           preid: 'nightly'
 
       - name: Publish to GitHub Packages
