@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - master
+    paths-ignore:
+      - 'package.json'
 
 jobs:
   build_and_publish:
@@ -43,4 +45,4 @@ jobs:
       - name: Publish to GitHub Packages
         run: npm publish --tag experimental
         env:
-          NPM_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
