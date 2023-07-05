@@ -39,6 +39,7 @@ jobs:
           minor-wording:  'MINOR:,minor:'
           major-wording:  'MAJOR:,major:'
           patch-wording:  'patch:,fix:'
+          rc-wording:     'RELEASE,alpha'
 
       - name: Publish to GitHub Packages
         run: npm publish --tag experimental
