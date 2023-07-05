@@ -40,6 +40,7 @@ jobs:
           major-wording:  'MAJOR:,major:'
           patch-wording:  'patch:,fix:'
           rc-wording:     'RELEASE,alpha'
+          preid: 'prc'
 
       - name: Publish to GitHub Packages
         run: npm publish --tag experimental
