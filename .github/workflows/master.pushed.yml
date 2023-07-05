@@ -39,7 +39,7 @@ jobs:
           minor-wording:  'MINOR:,minor:'
           major-wording:  'MAJOR:,major:'
           patch-wording:  'patch:,fix:'
-          rc-wording:     'RELEASE,alpha'
+          rc-wording:     ''
           preid: 'prc'
 
       - name: Publish to GitHub Packages
