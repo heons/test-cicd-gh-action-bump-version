@@ -35,7 +35,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           skip-tag:  'true'
-          default: 'prerelease'
+          default: 'minor'
           minor-wording:  'MINOR:,minor:'
           major-wording:  'MAJOR:,major:'
           patch-wording:  'patch:,fix:'
