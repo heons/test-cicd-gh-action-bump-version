@@ -34,13 +34,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          skip-tag:  'true'
-          default: 'prerelease'
-          minor-wording:  'MINOR:,minor:'
-          major-wording:  'MAJOR:,major:'
-          patch-wording:  'patch:,fix:'
-          rc-wording:     ''
-          preid: 'prc'
+          skip-tag: 'true'
+          version-type: 'prerelease'
+          rc-wording: ''
+          preid: 'nightly'
 
       - name: Publish to GitHub Packages
         run: npm publish --tag experimental
