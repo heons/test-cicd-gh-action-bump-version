@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - release
+    paths-ignore:
+      - 'package.json'
 
 jobs:
   build_and_publish:
