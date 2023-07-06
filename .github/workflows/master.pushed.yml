@@ -33,14 +33,14 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name:  'Automated Version Bump'
-      #   uses:  'phips28/gh-action-bump-version@master'
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     # skip-tag: 'true'
-      #     version-type: 'patch'
-      #     preid: 'nightly'
+      - name:  'Automated Version Bump'
+        uses:  'phips28/gh-action-bump-version@master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          skip-tag: 'true'
+          version-type: 'patch'
+          preid: 'nightly'
 
       # - uses: JS-DevTools/npm-publish@v2
       #   with:
