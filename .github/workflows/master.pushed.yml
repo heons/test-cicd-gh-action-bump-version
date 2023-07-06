@@ -33,20 +33,26 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name:  'Automated Version Bump'
-      #   uses:  'phips28/gh-action-bump-version@master'
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     skip-tag: 'true'
-      #     version-type: 'prerelease'
-      #     preid: 'nightly'
+      - name:  'Automated Version Bump'
+        uses:  'phips28/gh-action-bump-version@master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          skip-tag: 'true'
+          version-type: 'patch'
+          preid: 'nightly'
+
+      - uses: JS-DevTools/npm-publish@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: 'experimental'
 
       # - name: Publish to GitHub Packages
       #   run: npm publish --tag experimental
       #   env:
       #     NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: npx semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # - run: npx semantic-release
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
