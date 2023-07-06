@@ -10,9 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/heons/test-cicd-gh-action-bump-version.git"
   },
-  "publishConfig": {
-    "tag": "experimental"
-  },
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -20,7 +17,6 @@
   },
   "homepage": "https://github.com/heons/test-cicd-gh-action-bump-version#readme",
   "devDependencies": {
-    "@jsdevtools/npm-publish": "^2.2.0",
     "@semantic-release/commit-analyzer": "^10.0.1",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^10.0.4"
