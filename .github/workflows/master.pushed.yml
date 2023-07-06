@@ -39,7 +39,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           skip-tag: 'true'
-          version-type: 'patch'
+          version-type: 'minor'
           preid: 'nightly'
 
       # - uses: JS-DevTools/npm-publish@v2
