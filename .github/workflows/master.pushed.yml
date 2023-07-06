@@ -46,6 +46,7 @@ jobs:
           skip-tag: 'true'
           version-type: 'patch'
           preid: 'nightly'
+          bump-policy: 'all'
 
       # - uses: JS-DevTools/npm-publish@v2
       #   with:
