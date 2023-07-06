@@ -48,7 +48,6 @@ jobs:
           registry: 'https://npm.pkg.github.com/'
           tag: 'experimental'
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           NPM_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
       # - name: Publish to GitHub Packages
