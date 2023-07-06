@@ -45,6 +45,7 @@ jobs:
       - uses: JS-DevTools/npm-publish@v2
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
+          registry: 'https://npm.pkg.github.com/'
           tag: 'experimental'
 
       # - name: Publish to GitHub Packages
