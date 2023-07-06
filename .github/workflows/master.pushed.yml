@@ -48,7 +48,7 @@ jobs:
       #     tag: 'experimental'
 
       - name: Publish to GitHub Packages
-        run: npm publish --tag experimental
+        run: npm publish
         env:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
