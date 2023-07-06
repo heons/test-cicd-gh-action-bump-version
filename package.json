@@ -1,6 +1,6 @@
 {
   "name": "@heons/test-cicd-gh-action-bump-version",
-  "version": "1.2.1-nightly.9",
+  "version": "1.2.1-nightly.10",
   "description": "to test github cicd",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,5 @@
     "url": "https://github.com/heons/test-cicd-gh-action-bump-version/issues"
   },
   "homepage": "https://github.com/heons/test-cicd-gh-action-bump-version#readme",
-  "dependencies": {
-  }
+  "dependencies": {}
 }
