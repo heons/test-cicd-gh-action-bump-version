@@ -42,19 +42,19 @@ jobs:
       #     version-type: 'patch'
       #     preid: 'nightly'
 
-      - uses: JS-DevTools/npm-publish@v2
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          tag: 'experimental'
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - uses: JS-DevTools/npm-publish@v2
+      #   with:
+      #     token: ${{ secrets.NPM_TOKEN }}
+      #     tag: 'experimental'
+      #   env:
+      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       # - name: Publish to GitHub Packages
       #   run: npm publish
       #   env:
       #     NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # - run: npx semantic-release
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #     NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
