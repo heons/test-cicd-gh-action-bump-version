@@ -4,7 +4,9 @@ name: test cicd pushed to master
 on:
   pull_request:
     types:
-      - closed
+      - opened
+      - reopened
+      - synchronize
   # push:
   #   branches:
   #     - master
@@ -52,10 +54,10 @@ jobs:
       #   env:
       #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Publish to GitHub Packages
-        run: npm publish --tag experimental
-        env:
-          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Publish to GitHub Packages
+      #   run: npm publish --tag experimental
+      #   env:
+      #     NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # - run: npx semantic-release
       #   env:
