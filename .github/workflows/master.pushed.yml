@@ -49,12 +49,12 @@ jobs:
       #   env:
       #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      # - name: Publish to GitHub Packages
-      #   run: npm publish
-      #   env:
-      #     NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - run: npx semantic-release
+      - name: Publish to GitHub Packages
+        run: npm publish --tag experimental
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # - run: npx semantic-release
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
