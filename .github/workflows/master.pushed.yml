@@ -43,7 +43,8 @@ jobs:
         with:
           skip-tag: 'true'
           default: 'prerelease'
-          preid: 'prc'
+          preid: 'nightly'
+          rc-wording: ''
           # version-type:  'patch'
           major-wording:  '(MAJOR)'
           minor-wording:  'feat/,refactor-core/'
