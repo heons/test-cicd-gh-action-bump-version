@@ -1,6 +1,6 @@
 {
   "name": "@heons/test-cicd-gh-action-bump-version",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "to test github cicd",
   "main": "index.js",
   "scripts": {
