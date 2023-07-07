@@ -42,9 +42,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           skip-tag: 'true'
-          major-wording:  '(MAJOR)'
-          minor-wording:  'feat/,refactor-core/'
-          patch-wording:  'fix/,refactor/'
+          version-type:  'patch'
+          # major-wording:  '(MAJOR)'
+          # minor-wording:  'feat/,refactor-core/'
+          # patch-wording:  'fix/,refactor/'
 
       # - uses: JS-DevTools/npm-publish@v2
       #   with:
