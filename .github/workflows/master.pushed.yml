@@ -42,6 +42,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           skip-tag: 'true'
+          default: 'prerelease'
           # version-type:  'patch'
           major-wording:  '(MAJOR)'
           minor-wording:  'feat/,refactor-core/'
