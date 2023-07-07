@@ -37,6 +37,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name:  'Automated Version Bump'
+        id: 'version-bump'
         uses:  'phips28/gh-action-bump-version@master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -50,6 +51,8 @@ jobs:
           minor-wording:  'feat/,refactor-core/'
           patch-wording:  'fix/,refactor/'
 
+      - name: 'see output'
+        run: 'echo ${{ steps.version-bump.outputs }}'
       # - uses: JS-DevTools/npm-publish@v2
       #   with:
       #     token: ${{ secrets.NPM_TOKEN }}
