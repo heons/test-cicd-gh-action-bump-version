@@ -43,13 +43,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           skip-tag: 'true'
-          default: 'prerelease'
-          preid: 'nightly'
-          rc-wording: ''
+          # default: 'prerelease'
+          # preid: 'nightly'
+          # rc-wording: ''
           # version-type:  'patch'
           major-wording:  '(MAJOR)'
           minor-wording:  'feat/,refactor-core/'
-          patch-wording:  'fix/,refactor/'
+          # patch-wording:  'fix/,refactor/'
 
       - name: 'see output'
         run: 'echo ${{ steps.version-bump.outputs }}'
