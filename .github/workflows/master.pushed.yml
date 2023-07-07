@@ -2,14 +2,14 @@
 name: test cicd pushed to master
 
 on:
-  pull_request:
-    types:
-      - closed
-  # push:
-  #   branches:
-  #     - master
-  #   paths-ignore:
-  #     - 'package.json'
+  # pull_request:
+  #   types:
+  #     - closed
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - 'package.json'
 
 jobs:
   build_and_publish:
@@ -22,7 +22,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -34,7 +34,7 @@ jobs:
       - name: Install dependencies
         run: npm install --tag experimental
         env:
-          NPM_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name:  'Automated Version Bump'
         uses:  'phips28/gh-action-bump-version@master'
@@ -42,10 +42,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           skip-tag: 'true'
-          version-type:  'patch'
-          # major-wording:  '(MAJOR)'
-          # minor-wording:  'feat/,refactor-core/'
-          # patch-wording:  'fix/,refactor/'
+          # version-type:  'patch'
+          major-wording:  '(MAJOR)'
+          minor-wording:  'feat/,refactor-core/'
+          patch-wording:  'fix/,refactor/'
 
       # - uses: JS-DevTools/npm-publish@v2
       #   with:
