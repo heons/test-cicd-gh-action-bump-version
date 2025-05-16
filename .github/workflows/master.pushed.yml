@@ -22,7 +22,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          # We need PAT when 'Require a pull request before merging' branch rule is set
+          token: ${{ secrets.CICD_TOKEN }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
